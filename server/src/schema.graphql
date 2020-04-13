@@ -1,0 +1,17 @@
+type Query {
+  posts: [Post!]!
+  post(id: ID!): Post
+}
+
+type Mutation {
+  submitPost(title: String!, content: String): Post
+  deletePost(id: ID!): Post
+}
+
+type Post {
+  id: ID!
+  published: Boolean!
+  title: String!
+  content: String!
+  image: String
+}
